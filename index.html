@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dilip Gelot</title>
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <!---------------   Font Awesome  &   CSS ------------------------------>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+    <!---------------   Google Fonts   ------------------------------------->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Carter+One&family=Diplomata+SC&family=Henny+Penny&family=Lobster&family=Lobster+Two:ital@1&family=Patrick+Hand&family=Patua+One&family=Poppins&family=Roboto&family=Roboto+Mono:wght@100&family=Roboto+Slab:wght@300&family=Rubik&family=Rubik+Moonrocks&family=Signika+Negative:wght@300&family=Slabo+27px&family=Sriracha&family=Staatliches&family=Tiro+Kannada&family=Ubuntu:wght@300&family=Xanh+Mono&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body id="body">
+    <!----------------   NavBar   ------------------------------------------------>
+
+    <header id="header">
+      <div class="logo" id="logo">
+        <img src="/Images/logo.png" height="50px" />
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#first-page" style="color: #7a3df3">Home</a></li>
+          <li><a href="#About">About Me</a></li>
+          <li><a href="#Services">Services</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#Project">Projects</a></li>
+          <li><a href="#Contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!---------------    HUMBURGER   MENU    ----------------------------------->
+
+      <div class="humburger">
+        <i class="fa-solid fa-bars" id="humburger_icon"></i>
+        <div class="menu_box" id="menu-box">
+          <a href="#">Home</a>
+          <a href="#">About</a>
+          <a href="#">Services</a>
+          <a href="#">Project</a>
+          <a href="#">Contact</a>
+
+          <div
+            style="
+              display: flex;
+              color: white;
+              margin-top: 50px;
+              justify-content: space-evenly;
+              width: 90%;
+              font-size: 28px;
+            "
+          >
+            <a href="https://wa.link/m2lswf" target="_blank">
+              <i class="fa-brands fa-whatsapp"></i
+            ></a>
+            <a
+              href="https://www.linkedin.com/in/dilip-gelot-361852238/"
+              target="_blank"
+              ><i class="fa-brands fa-linkedin"></i
+            ></a>
+            <a
+              href="https://www.instagram.com/gelot_dilip_/?utm_medium=copy_link"
+              target="_blank"
+              ><i class="fa-brands fa-instagram"></i
+            ></a>
+            <a href="https://github.com/DilipGelot" target="_blank"
+              ><i class="fa-brands fa-github"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!----------- FIRST PAGE CONETNT   ------------------------ -->
+
+    <div id="first-page">
+      <div class="first_page_content">
+        <div style="display: flex; align-items: center">
+          <h2>HELLO</h2>
+          <div class="hello-line"></div>
+        </div>
+        <h1>I AM <span id="gdName">Dilip Gelot</span></h1>
+        <span class="header-sub-title" id="word"></span
+        ><span class="header-sub-title blink" id="word">|</span>
+        <div>
+          <a href="./Images/My Resume.pdf"
+            ><button id="hire_me">HIRE ME</button></a
+          >
+          <button id="get_cv">GET CV</button>
+        </div>
+      </div>
+
+      <img src="/Images/home-right.png" id="home_image" />
+    </div>
+
+    <!----------------    About Page        ---------------------------------------------------------->
+
+    <div
+      class="about_heading"
+      data-aos="fade-down"
+      data-aos-duration="700"
+      id="About"
+    >
+      <div>
+        <p class="section-heading">Slice of Me</p>
+        <div class="heading-line"></div>
+      </div>
+    </div>
+
+    <div class="about_page">
+      <img
+        src="./Images/dilipGelot.png"
+        id="about_img"
+        data-aos="fade-up"
+        data-aos-duration="1500"
+      />
+
+      <div class="about_content" data-aos="fade-down" data-aos-duration="1500">
+        <p>
+          I'm Dilip Gelot, Frontend Developer. I am proficient in
+          <span id="gdName"><b> HTML5, CSS3, JavaScript</b></span
+          >, and Frontend Framworks like
+          <span id="gdName"><b> Bootstrap ,Tailwind css</b> </span> and
+          <span id="gdName"><b>ReactJs</b></span
+          >. And I am familiar with Backend tech stacks like <b>PHP</b> and
+          Database <b>Mysql.</b> <br /><br />
+          As a Web Developer, my objective is To make a positive impact on
+          client Using my skills and experience to develop attractive websites.
+        </p>
+
+        <div class="education">
+          <div class="main-edu">
+            <div class="edu-circle">
+              <p>2023</p>
+            </div>
+            <div id="edu_content">
+              <h2>BCA</h2>
+              <h3>
+                Hemchandracharya North Gujarat University
+                <p>CGPA 8.7</p>
+              </h3>
+            </div>
+          </div>
+
+          <div id="edu_line"></div>
+
+          <div class="main-edu">
+            <div class="edu-circle">
+              <p>2020</p>
+            </div>
+            <div id="edu_content">
+              <h2>12th Science</h2>
+              <h3>SIR CHARLES WATSON HIGH SCHOOL</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-------------------------   Services   ------------------------------------------------->
+
+    <div class="services_heading" id="Services">
+      <div>
+        <p class="section-heading">Services Offer</p>
+        <div class="heading-line"></div>
+      </div>
+    </div>
+
+    <div class="services">
+      <div class="service-item" data-aos="zoom-out-up" data-aos-duration="1100">
+        <i class="fa-solid fa-code"></i>
+        <br /><br />
+        <b>
+          <p id="service_name">Website Creation</p> </b
+        ><br />
+        <p>
+          I will build any kind of fully Responsive Website for your Business.
+        </p>
+      </div>
+
+      <div class="service-item" data-aos="zoom-out-up" data-aos-duration="1100">
+        <i
+          class="fa-solid fa-code-compare"
+          style="transform: rotate(90deg)"
+        ></i>
+        <br /><br />
+        <b>
+          <p id="service_name">File Conversion</p>
+        </b>
+        <br />
+        <p>
+          I will convert PSD to HTML, Figma to HTML websites and vice versa.
+        </p>
+      </div>
+      <div class="service-item" data-aos="zoom-out-up" data-aos-duration="1100">
+        <i class="fa-solid fa-screwdriver-wrench"></i>
+        <br /><br />
+        <b>
+          <p id="service_name">Customization</p> </b
+        ><br />
+        <p>I will do any customization for your prebuild HTML Website.</p>
+      </div>
+      <div class="service-item" data-aos="zoom-out-up" data-aos-duration="1100">
+        <i class="fa-solid fa-bug"></i>
+        <br /><br />
+        <b>
+          <p id="service_name">Bug Fixing</p> </b
+        ><br />
+        <p>I will do any kind of bug fixing for your prebuild HTML website.</p>
+      </div>
+    </div>
+
+    <!------------------------      MY SKILLS   ---------------------------------------------------------->
+
+    <div class="skill_heading" id="skills">
+      <div>
+        <p class="section-heading">Tech Stacks</p>
+        <div class="heading-line"></div>
+      </div>
+    </div>
+
+    <div class="skills">
+      <div class="skill-item" data-aos="fade-up" data-aos-duration="1100">
+        <i class="fa-brands fa-html5"></i><span>HTML5</span>
+        <div class="html-progress-bar"></div>
+      </div>
+      <div class="skill-item" data-aos="fade-up" data-aos-duration="1100">
+        <i class="fa-brands fa-css3-alt"></i><span>CSS3</span>
+        <div class="css-progress-bar"></div>
+      </div>
+      <div class="skill-item" data-aos="fade-up" data-aos-duration="1000">
+        <i class="fa-brands fa-bootstrap"></i><span>Bootstrap</span>
+        <div class="bootstrap-progress-bar"></div>
+      </div>
+      <div class="skill-item" data-aos="fade-up" data-aos-duration="1200">
+        <i class="fa-brands fa-css3"></i><span>Tailwind css</span>
+        <div class="tailwind-progress-bar"></div>
+      </div>
+      <div class="skill-item" data-aos="fade-up" data-aos-duration="2000">
+        <i class="fa-brands fa-square-js"></i><span>JavaScript</span>
+        <div class="javascript-progress-bar"></div>
+      </div>
+      <div class="skill-item" data-aos="fade-up" data-aos-duration="1000">
+        <i class="fa-brands fa-react"></i><span>ReactJs</span>
+        <div class="reactJs-progress-bar"></div>
+      </div>
+      <div class="skill-item" data-aos="fade-up" data-aos-duration="1000">
+        <i class="fa-brands fa-php"></i><span>PHP</span>
+        <div class="php-progress-bar"></div>
+      </div>
+      <div class="skill-item" data-aos="fade-up" data-aos-duration="1200">
+        <i class="fa-solid fa-database"></i><span>Mysql</span>
+        <div class="mysql-progress-bar"></div>
+      </div>
+    </div>
+
+    <!-------------------------   Personal Projects   ------------------------------------------------->
+
+    <div class="projects_heading" id="Project">
+      <div>
+        <p
+          style="
+            font-size: 33px;
+            font-weight: bold;
+            font-style: normal;
+            font-family: 'Patua One', cursive;
+            letter-spacing: 1.5px;
+          "
+        >
+          Recent Projects
+        </p>
+        <div
+          style="
+            height: 4px;
+            width: 100px;
+            border-radius: 10px;
+            margin-left: 70px;
+            margin-top: 8px;
+            background: linear-gradient(
+              to top left,
+              rgb(37, 123, 229),
+              rgb(166, 29, 230)
+            );
+          "
+        ></div>
+      </div>
+    </div>
+
+    <div class="projects" data-aos="fade-up" data-aos-duration="1500">
+      <button onclick="plusSlide(-1)">
+        <i class="fa-solid fa-chevron-left"></i>
+      </button>
+      <div class="project-slider">
+        <div class="slide">
+          <div id="first_slide">
+            <div id="project_img">
+              <img src="/Images/project.png" id="laptop" />
+            </div>
+            <div class="project_content">
+              <p class="project_name">Capital Store</p>
+              <p
+                style="
+                  font-size: 15px;
+                  line-height: 25px;
+                  margin-top: 10px;
+                  letter-spacing: 0.5px;
+                  color: rgb(21, 20, 20);
+                  font-family: 'Roboto', sans-serif;
+                "
+              >
+                (E-commerce Website)
+              </p>
+              <p class="project_des">
+                This is my Major project build using
+                <b>HTML5, CSS3, JavaScript. </b>It has a variety of categories,
+                just visit the product listing page and you will see all the
+                products. I design it Responsive and add signUp, signIn pages.
+              </p>
+              <a
+                href="https://adorable-sunshine-0a9e75.netlify.app"
+                target="_blank"
+                ><button id="visit-site">
+                  Visit Site <i class="fa-solid fa-eye"></i></button
+              ></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="slide">
+          <div id="first_slide">
+            <div id="project_img">
+              <img src="/Images/project3.png" id="laptop" />
+            </div>
+            <div class="project_content">
+              <p class="project_name">TextUtils</p>
+              <p
+                style="
+                  font-size: 15px;
+                  line-height: 25px;
+                  margin-top: 10px;
+                  letter-spacing: 0.5px;
+                  color: rgb(21, 20, 20);
+                  font-family: 'Roboto', sans-serif;
+                "
+              >
+                (Text analyser)
+              </p>
+              <p class="project_des">
+                I build this TextUtils using <b>ReactJs, bootstrap</b>. In this
+                project you can Convert Text to UPPERCASE, Convert Text to
+                lowercase, clear text, Copy to clipboard, Count characters and
+                words, Remove extra spaces in the paragraph and preview input
+                text.
+              </p>
+              <a
+                href="https://relaxed-valkyrie-d7b410.netlify.app"
+                target="_blank"
+                ><button id="visit-site">
+                  Visit Site <i class="fa-solid fa-eye"></i></button
+              ></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="slide">
+          <div id="first_slide">
+            <div id="project_img">
+              <img src="/Images/project4.png" id="laptop" />
+            </div>
+            <div class="project_content">
+              <p class="project_name">Restaurant-static</p>
+              <p
+                style="
+                  font-size: 15px;
+                  line-height: 25px;
+                  margin-top: 10px;
+                  letter-spacing: 0.5px;
+                  color: rgb(21, 20, 20);
+                  font-family: 'Roboto', sans-serif;
+                "
+              >
+                (Static Website)
+              </p>
+              <p class="project_des">
+                I build this using <b>HTML5, CSS3</b>. this is a static website
+                You can use it for showcase on Restaurant.
+              </p>
+              <a
+                href="https://unrivaled-sawine-27cc81.netlify.app"
+                target="_blank"
+                ><button id="visit-site">
+                  Visit Site <i class="fa-solid fa-eye"></i></button
+              ></a>
+            </div>
+          </div>
+        </div>
+        <div class="slide">
+          <div id="first_slide">
+            <div id="project_img">
+              <img src="/Images/project5.png" id="laptop" />
+            </div>
+            <div class="project_content">
+              <p class="project_name">Portfolio</p>
+              <p
+                style="
+                  font-size: 15px;
+                  line-height: 25px;
+                  margin-top: 10px;
+                  letter-spacing: 0.5px;
+                  color: rgb(21, 20, 20);
+                  font-family: 'Roboto', sans-serif;
+                "
+              >
+                (Personal Portfolio Website)
+              </p>
+              <p class="project_des">
+                I build this responsive portfolio using HTML, CSS, JS. In which
+                I show my skills, other minor Projects, Contact Form.
+              </p>
+              <a
+                href="#"
+                ><button id="visit-site">
+                  Visit Site <i class="fa-solid fa-eye"></i></button
+              ></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <button onclick="plusSlide(+1)">
+        <i class="fa-solid fa-chevron-right"></i>
+      </button>
+    </div>
+
+    <!-------------------------   Personal Projects   ------------------------------------------------->
+
+    <!----------------------------     Contact Me       ----------------------------------------------------->
+
+    <div class="contact">
+      <div class="connect_me">
+        <div class="contact_heading">
+          <div>
+            <p
+              style="
+                font-size: 33px;
+                font-weight: bold;
+                font-style: normal;
+                font-family: 'Patua One', cursive;
+                letter-spacing: 1.5px;
+              "
+            >
+              Get In Touch
+            </p>
+            <div
+              style="
+                height: 4px;
+                width: 100px;
+                border-radius: 10px;
+                margin-left: 45px;
+                margin-top: 8px;
+                background: linear-gradient(
+                  to top left,
+                  rgb(37, 123, 229),
+                  rgb(166, 29, 230)
+                );
+              "
+            ></div>
+          </div>
+        </div>
+        <p
+          style="
+            font-size: 15px;
+            line-height: 25px;
+            letter-spacing: 0.5px;
+            color: rgb(52, 52, 52);
+            font-family: 'Rubik', sans-serif;
+          "
+        >
+          Take a coffee with me?
+        </p>
+        <button id="connect">
+          Let's Contact <i class="fa-solid fa-arrow-right-from-bracket"></i>
+        </button>
+      </div>
+      <div class="icons">
+        <a
+          href="https://www.linkedin.com/in/dilip-gelot-361852238/"
+          target="_blank"
+        >
+          <div class="layer">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span class="fab fa fa-linkedin"></span>
+          </div>
+          <div class="text">linkedin</div>
+        </a>
+        <a href="https://github.com/DilipGelot" target="_blank">
+          <div class="layer">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span class="fab fa fa-github"></span>
+          </div>
+          <div class="text">Github</div>
+        </a>
+        <a href="mailto: gelotdilip9@gmail.com">
+          <div class="layer">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span class="fab fa fa-envelope"></span>
+          </div>
+          <div class="text">Email</div>
+        </a>
+        <a href="https://wa.link/m2lswf" target="_blank">
+          <div class="layer">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span class="fab fa fa-whatsapp"></span>
+          </div>
+          <div class="text">Whatsapp</div>
+        </a>
+        <a
+          href="https://www.instagram.com/gelot_dilip_/?utm_medium=copy_link"
+          target="_blank"
+        >
+          <div class="layer">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span class="fab fa fa-instagram"></span>
+          </div>
+          <div class="text">Instagram</div>
+        </a>
+      </div>
+    </div>
+
+    <!-- *******    Contact FORM   ************** -->
+    <div id="Contact"></div>
+    <div id="contact_form">
+      <form>
+        <i class="fa-solid fa-xmark" id="close"></i>
+        <h2>Send me a message</h2>
+        <input type="text" placeholder="Enter Name" id="name" required />
+        <input type="email" placeholder="Enter Email" id="email" required />
+        <input type="tel" placeholder="Enter Phone" id="phone" required />
+        <textarea
+          id="message"
+          rows="5"
+          placeholder="How can I help you?"
+        ></textarea>
+        <button id="submit" type="submit">Send Message</button>
+      </form>
+    </div>
+
+    <!-- *******    Contact FORM   ************** -->
+
+    <!----------------------------     Contact Me  End      ----------------------------------------------------->
+
+    <!------------------------  Copy Right    --------------------------------------------------------->
+
+    <div class="copy_right">
+      <p>Design and Developed by <b>Dilip Gelot</b> &hearts;</p>
+    </div>
+
+    <!------------------------  Copy Right    --------------------------------------------------------->
+
+    <!-- JavaScript Aos -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    <script src="script.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
