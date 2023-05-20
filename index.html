@@ -17,7 +17,7 @@
       href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
     />
 
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./css/style.css" />
     <!---------------   Google Fonts   ------------------------------------->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -30,85 +30,107 @@
   <body id="body">
     <!----------------   NavBar   ------------------------------------------------>
 
-    <header id="header">
-      <div class="logo" id="logo">
-        <img src="/Images/logo.png" height="50px" />
-      </div>
-      <nav>
-        <ul>
-          <li><a href="#first-page" style="color: #7a3df3">Home</a></li>
-          <li><a href="#About">About Me</a></li>
-          <li><a href="#Services">Services</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#Project">Projects</a></li>
-          <li><a href="#Contact">Contact</a></li>
-        </ul>
-      </nav>
 
-      <!---------------    HUMBURGER   MENU    ----------------------------------->
-
-      <div class="humburger">
-        <i class="fa-solid fa-bars" id="humburger_icon"></i>
-        <div class="menu_box" id="menu-box">
-          <a href="#">Home</a>
-          <a href="#">About</a>
-          <a href="#">Services</a>
-          <a href="#">Project</a>
-          <a href="#">Contact</a>
-
-          <div
-            style="
-              display: flex;
-              color: white;
-              margin-top: 50px;
-              justify-content: space-evenly;
-              width: 90%;
-              font-size: 28px;
-            "
-          >
-            <a href="https://wa.link/m2lswf" target="_blank">
-              <i class="fa-brands fa-whatsapp"></i
-            ></a>
-            <a
-              href="https://www.linkedin.com/in/dilip-gelot-361852238/"
-              target="_blank"
-              ><i class="fa-brands fa-linkedin"></i
-            ></a>
-            <a
-              href="https://www.instagram.com/gelot_dilip_/?utm_medium=copy_link"
-              target="_blank"
-              ><i class="fa-brands fa-instagram"></i
-            ></a>
-            <a href="https://github.com/DilipGelot" target="_blank"
-              ><i class="fa-brands fa-github"></i
-            ></a>
+    <div id="bg-gd"></div>
+    <div class="main-gd">
+      <header id="header">
+        <div class="logo" id="logo">
+          <img src="/Images/logo.png" height="50px" />
+        </div>
+        <nav>
+          <ul>
+            <li><a href="#first-page" style="color: #7a3df3">Home</a></li>
+            <li><a href="#About">About Me</a></li>
+            <li><a href="#Services">Services</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#Project">Projects</a></li>
+            <li><a href="#Contact">Contact</a></li>
+            <li>
+              <div>
+                <input type="checkbox" class="checkbox" id="chk" />
+                <label class="label" for="chk">
+                  <p>🌝</p>
+                  <p>🌞</p>
+                  <div class="ball"></div>
+                </label>
+              </div>
+            </li>
+          </ul>
+        </nav>
+  
+        <!---------------    HUMBURGER   MENU    ----------------------------------->
+  
+        <div class="humburger">
+          <i class="fa-solid fa-bars" id="humburger_icon"></i>
+          <div class="menu_box" id="menu-box">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Project</a>
+            <a href="#">Contact</a>
+              <div>
+                <input type="checkbox" class="checkbox" id="chk" />
+                <label class="label" for="chk">
+                  <i class="fas fa-moon"></i>
+                  <i class="fas fa-sun"></i>
+                  <div class="ball"></div>
+                </label>
+              </div>
+  
+            <div
+              style="
+                display: flex;
+                color: white;
+                margin-top: 50px;
+                justify-content: space-evenly;
+                width: 90%;
+                font-size: 28px;
+              "
+            >
+              <a href="https://wa.link/m2lswf" target="_blank">
+                <i class="fa-brands fa-whatsapp"></i
+              ></a>
+              <a
+                href="https://www.linkedin.com/in/dilip-gelot-361852238/"
+                target="_blank"
+                ><i class="fa-brands fa-linkedin"></i
+              ></a>
+              <a
+                href="https://www.instagram.com/gelot_dilip_/?utm_medium=copy_link"
+                target="_blank"
+                ><i class="fa-brands fa-instagram"></i
+              ></a>
+              <a href="https://github.com/DilipGelot" target="_blank"
+                ><i class="fa-brands fa-github"></i
+              ></a>
+            </div>
           </div>
         </div>
-      </div>
-    </header>
-
-    <!----------- FIRST PAGE CONETNT   ------------------------ -->
-
-    <div id="first-page">
-      <div class="first_page_content">
-        <div style="display: flex; align-items: center">
-          <h2>HELLO</h2>
-          <div class="hello-line"></div>
+      </header>
+  
+      <!----------- FIRST PAGE CONETNT   ------------------------ -->
+  
+      <div id="first-page" >
+        <div class="first_page_content">
+          <div style="display: flex; align-items: center">
+            <h2>HELLO</h2>
+            <div class="hello-line"></div>
+          </div>
+          <h1>I AM <span id="gdName">Dilip Gelot</span></h1>
+          <span class="header-sub-title" id="word"></span
+          ><span class="header-sub-title blink" id="word">|</span>
+          <div>
+            <a href="mailto: gelotdilip9@gmail.com"
+              ><button id="hire_me">HIRE ME</button></a
+            >
+            <a href="./Images/My Resume.pdf">
+              <button id="get_cv">GET CV</button>
+            </a>
+          </div>
         </div>
-        <h1>I AM <span id="gdName">Dilip Gelot</span></h1>
-        <span class="header-sub-title" id="word"></span
-        ><span class="header-sub-title blink" id="word">|</span>
-        <div>
-          <a href="mailto: gelotdilip9@gmail.com"
-            ><button id="hire_me">HIRE ME</button></a
-          >
-          <a href="./Images/My Resume.pdf">
-            <button id="get_cv">GET CV</button>
-          </a>
-        </div>
+  
+        <img src="/Images/home-right.png" id="home_image" />
       </div>
-
-      <img src="/Images/home-right.png" id="home_image" />
     </div>
 
     <!----------------    About Page        ---------------------------------------------------------->
@@ -312,14 +334,7 @@
             <div class="project_content">
               <p class="project_name">Capital Store</p>
               <p
-                style="
-                  font-size: 15px;
-                  line-height: 25px;
-                  margin-top: 10px;
-                  letter-spacing: 0.5px;
-                  color: rgb(21, 20, 20);
-                  font-family: 'Roboto', sans-serif;
-                "
+              class="project-subtitle"
               >
                 (E-commerce Website)
               </p>
@@ -347,14 +362,7 @@
             <div class="project_content">
               <p class="project_name">TextUtils</p>
               <p
-                style="
-                  font-size: 15px;
-                  line-height: 25px;
-                  margin-top: 10px;
-                  letter-spacing: 0.5px;
-                  color: rgb(21, 20, 20);
-                  font-family: 'Roboto', sans-serif;
-                "
+              class="project-subtitle"
               >
                 (Text analyser)
               </p>
@@ -382,16 +390,7 @@
             </div>
             <div class="project_content">
               <p class="project_name">Restaurant-static</p>
-              <p
-                style="
-                  font-size: 15px;
-                  line-height: 25px;
-                  margin-top: 10px;
-                  letter-spacing: 0.5px;
-                  color: rgb(21, 20, 20);
-                  font-family: 'Roboto', sans-serif;
-                "
-              >
+              <p class="project-subtital">
                 (Static Website)
               </p>
               <p class="project_des">
@@ -415,14 +414,7 @@
             <div class="project_content">
               <p class="project_name">Portfolio</p>
               <p
-                style="
-                  font-size: 15px;
-                  line-height: 25px;
-                  margin-top: 10px;
-                  letter-spacing: 0.5px;
-                  color: rgb(21, 20, 20);
-                  font-family: 'Roboto', sans-serif;
-                "
+              class="project-subtitle"
               >
                 (Personal Portfolio Website)
               </p>
@@ -480,15 +472,9 @@
           </div>
         </div>
         <p
-          style="
-            font-size: 15px;
-            line-height: 25px;
-            letter-spacing: 0.5px;
-            color: rgb(52, 52, 52);
-            font-family: 'Rubik', sans-serif;
-          "
-        >
-        Let's have a talk about your IDEA
+              class="project-subtitle"
+              >
+          Let's have a talk about your IDEA
         </p>
         <button id="connect">
           Let's Contact <i class="fa-solid fa-arrow-right-from-bracket"></i>
@@ -581,6 +567,9 @@
     <div class="copy_right">
       <p>Design and Developed by <b>Dilip Gelot</b> &hearts;</p>
     </div>
+    <!-- <div id="bg-anim">
+      
+    </div> -->
 
     <!------------------------  Copy Right    --------------------------------------------------------->
 
@@ -589,7 +578,9 @@
     <script>
       AOS.init();
     </script>
-    <script src="script.js"></script>
+    <script src="./js/particles.min.js"></script>
+    <script src="./js/particles.js"></script>
+    <script src="./js/script.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"

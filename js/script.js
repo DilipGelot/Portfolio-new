@@ -110,3 +110,10 @@ document.getElementById("close").onclick = function(){
 	msg_box.style.display = "none";
 }
 
+ // ************ Dark mode *********
+
+ const chk = document.getElementById('chk');
+
+chk.addEventListener('change', () => {
+	document.body.classList.toggle('dark');
+});
