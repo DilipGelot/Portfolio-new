@@ -1,23 +1,23 @@
 particlesJS("bg-gd", {
   particles: {
     number: {
-      value: 87,
+      value: 120,
       density: { enable: true, value_area: 710.2328774690454 },
     },
-    color: { value: "#ffffff" },
+    color: { value: "#a61de6" },
     shape: {
       type: "circle",
-      stroke: { width: 0, color: "#000000" },
-      polygon: { nb_sides: 5 },
+      stroke: { width: 0.5, color: "#f2f2f2" },
+      polygon: { nb_sides: 4 },
       image: { src: "img/github.svg", width: 100, height: 100 },
     },
     opacity: {
       value: 1,
       random: true,
-      anim: { enable: false, speed: 1, opacity_min: 0.1, sync: false },
+      anim: { enable: true, speed: 1, opacity_min: 0.1, sync: false },
     },
     size: {
-      value: 2,
+      value: 3,
       random: true,
       anim: {
         enable: true,
@@ -27,10 +27,10 @@ particlesJS("bg-gd", {
       },
     },
     line_linked: {
-      enable: false,
-      distance: 150,
+      enable: true,
+      distance: 80.17060304327615,
       color: "#ffffff",
-      opacity: 0.4,
+      opacity: 0.09620472365193136,
       width: 1,
     },
     move: {

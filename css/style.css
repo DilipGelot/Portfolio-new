@@ -200,13 +200,6 @@ nav ul li a:hover {
 .first_page_content {
   padding-left: 10vw;
   padding-top: 17vh;
-  /* background: linear-gradient(
-      to top,
-      rgba(255, 255, 255, 0.938),
-      rgba(255, 255, 255, 0.884)
-    ),
-    url(./Images/bg-img.png) no-repeat; */
-  /* background: url(./Images/bg-img.png); */
   background-size: contain;
   background-position: 0 50px;
   background-repeat: no-repeat;
@@ -315,7 +308,7 @@ nav ul li a:hover {
 /* Home Image */
 @media screen and (max-width: 1200px) {
   #home_image {
-    height: 50vh;
+    height: 45vh;
   }
   .first_page_content {
     padding-top: 5vh;
@@ -331,18 +324,18 @@ nav ul li a:hover {
     margin-top: 10px;
   }
   #home_image {
-    height: 85vw;
+    height: 80vw;
     padding: 10px 10vw;
   }
 
   .first_page_content {
     padding: 0 10px;
-    background: linear-gradient(
+    /* background: linear-gradient(
         to top,
         rgba(255, 255, 255, 0.938),
         rgba(255, 255, 255, 0.884)
       ),
-      url(bg-img.jpg) no-repeat;
+      url(bg-img.jpg) no-repeat; */
     background-size: contain;
     background-position: bottom;
   }
