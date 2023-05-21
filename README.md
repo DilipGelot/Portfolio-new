@@ -7,8 +7,9 @@ Features :-
 - Responsive for all screen sizes 
 - Scroll up and down animations
 - Smooth scrolling effect
+- Enable Dark mode light mode
 
 
 ## Demo 
 
-https://manish-thakur-portfolio.netlify.app/
+https://dilipgelot-portfolio.netlify.app/
