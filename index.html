@@ -25,11 +25,16 @@
       href="https://fonts.googleapis.com/css2?family=Carter+One&family=Diplomata+SC&family=Henny+Penny&family=Lobster&family=Lobster+Two:ital@1&family=Patrick+Hand&family=Patua+One&family=Poppins&family=Roboto&family=Roboto+Mono:wght@100&family=Roboto+Slab:wght@300&family=Rubik&family=Rubik+Moonrocks&family=Signika+Negative:wght@300&family=Slabo+27px&family=Sriracha&family=Staatliches&family=Tiro+Kannada&family=Ubuntu:wght@300&family=Xanh+Mono&display=swap"
       rel="stylesheet"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500;1,600&display=swap"
+      rel="stylesheet"
+    />
   </head>
 
   <body id="body">
     <!----------------   NavBar   ------------------------------------------------>
-
 
     <div id="bg-gd"></div>
     <div class="main-gd">
@@ -57,9 +62,9 @@
             </li>
           </ul>
         </nav>
-  
+
         <!---------------    HUMBURGER   MENU    ----------------------------------->
-  
+
         <div class="humburger">
           <i class="fa-solid fa-bars" id="humburger_icon"></i>
           <div class="menu_box" id="menu-box">
@@ -68,15 +73,15 @@
             <a href="#">Services</a>
             <a href="#">Project</a>
             <a href="#">Contact</a>
-              <div>
-                <input type="checkbox" class="checkbox" id="chk" />
-                <label class="label" for="chk">
-                  <i class="fas fa-moon"></i>
-                  <i class="fas fa-sun"></i>
-                  <div class="ball"></div>
-                </label>
-              </div>
-  
+            <div>
+              <input type="checkbox" class="checkbox" id="chk" />
+              <label class="label" for="chk">
+                <i class="fas fa-moon"></i>
+                <i class="fas fa-sun"></i>
+                <div class="ball"></div>
+              </label>
+            </div>
+
             <div
               style="
                 display: flex;
@@ -107,10 +112,10 @@
           </div>
         </div>
       </header>
-  
+
       <!----------- FIRST PAGE CONETNT   ------------------------ -->
-  
-      <div id="first-page" >
+
+      <div id="first-page">
         <div class="first_page_content">
           <div style="display: flex; align-items: center">
             <h2>HELLO</h2>
@@ -128,7 +133,7 @@
             </a>
           </div>
         </div>
-  
+
         <img src="/Images/home-right.png" id="home_image" />
       </div>
     </div>
@@ -333,11 +338,7 @@
             </div>
             <div class="project_content">
               <p class="project_name">Capital Store</p>
-              <p
-              class="project-subtitle"
-              >
-                (E-commerce Website)
-              </p>
+              <p class="project-subtitle">(E-commerce Website)</p>
               <p class="project_des">
                 This is my Major project build using
                 <b>HTML5, CSS3, JavaScript. </b>It has a variety of categories,
@@ -361,11 +362,7 @@
             </div>
             <div class="project_content">
               <p class="project_name">TextUtils</p>
-              <p
-              class="project-subtitle"
-              >
-                (Text analyser)
-              </p>
+              <p class="project-subtitle">(Text analyser)</p>
               <p class="project_des">
                 I build this TextUtils using <b>ReactJs, bootstrap</b>. In this
                 project you can Convert Text to UPPERCASE, Convert Text to
@@ -390,9 +387,7 @@
             </div>
             <div class="project_content">
               <p class="project_name">Restaurant-static</p>
-              <p class="project-subtitle">
-                (Static Website)
-              </p>
+              <p class="project-subtitle">(Static Website)</p>
               <p class="project_des">
                 I build this using <b>HTML5, CSS3</b>. this is a static website
                 You can use it for showcase on Restaurant.
@@ -413,11 +408,7 @@
             </div>
             <div class="project_content">
               <p class="project_name">Portfolio</p>
-              <p
-              class="project-subtitle"
-              >
-                (Personal Portfolio Website)
-              </p>
+              <p class="project-subtitle">(Personal Portfolio Website)</p>
               <p class="project_des">
                 I build this responsive portfolio using HTML, CSS, JS. In which
                 I show my skills, other minor Projects, Contact Form.
@@ -462,20 +453,12 @@
                 border-radius: 10px;
                 margin-left: 45px;
                 margin-top: 8px;
-                background: linear-gradient(
-                  to top left,
-                  #257be5,
-                  #a61de6
-                );
+                background: linear-gradient(to top left, #257be5, #a61de6);
               "
             ></div>
           </div>
         </div>
-        <p
-              class="project-subtitle"
-              >
-          Let's have a talk about your IDEA
-        </p>
+        <p class="project-subtitle">Let's have a talk about your IDEA</p>
         <button id="connect">
           Let's Contact <i class="fa-solid fa-arrow-right-from-bracket"></i>
         </button>
@@ -558,21 +541,123 @@
       </form>
     </div>
 
-    <!-- *******    Contact FORM   ************** -->
+    <footer>
+      <div class="footer">
+        <h1 class="weather-title">Weather</h1>
+        <!--Content before waves-->
+        <div class="inner-header flex">
+          <div class="search-bar">
+            <form id="locationInput">
+              <input
+                type="text"
+                class="search"
+                id="city"
+                placeholder="Search location..."
+              />
+              <button type="submit" class="submit" id="submits">
+                <i class="fas fa-search"></i>
+              </button>
+            </form>
+          </div>
+          <div class="weather-box">
+            <div class="weather-details">
+              <h1 class="temp"><span id="temp_c"></span>&#176;</h1>
+              <div class="city-time">
+                <h1 class="name" id="cityName">-</h1>
+                <small>
+                  <span id="region"></span>, <span id="country"></span> </small
+                ><br />
+                <small>
+                  <span class="time" id="time"></span>
+                </small>
+              </div>
+              <div class="weather">
+                <span class="condition" id="text"></span><br /><br />
+                <span class="tz_id"><span id="tz_id"></span></span>
+              </div>
+            </div>
+          </div>
+          <div class="weather-deep-details">
+            <div class="weather-deep-details-box">
+              <p>Cloudy</p><br>
+              <p class="cloud"><span id="cloud">-</span>%</p>
+            </div>
+            <div class="weather-deep-details-box">
+              <p>Humidity</p><br>
+              <p class="humidity"><span id="humidity"></span> %</p>
+            </div>
+            <div class="weather-deep-details-box">
+              <p>Wind</p><br>
+              <p class="wind"><span id="wind_kph"></span>km/h</p>
+            </div>
+            <div class="weather-deep-details-box">
+              <p>UV Index</p><br>
+              <p class="uv"><span id="uv"></span></p>
+            </div>
+            <div class="weather-deep-details-box">
+              <p>Pressure</p><br>
+              <p class="pressure_in"
+                ><span id="pressure_in"></span>-inch</p
+              >
+            </div>
+            <div class="weather-deep-details-box">
+              <p>Feels like</p><br>
+              <p class="feelslike_c"><span id="feelslike_c"></span>-C</p>
+            </div>
+          </div>
+        </div>
 
-    <!----------------------------     Contact Me  End      ----------------------------------------------------->
+        <!--Waves Container-->
+        <div>
+          <svg
+            class="waves"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            viewBox="0 24 150 28"
+            preserveAspectRatio="none"
+            shape-rendering="auto"
+          >
+            <defs>
+              <path
+                id="gentle-wave"
+                d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"
+              />
+            </defs>
+            <g class="parallax">
+              <use
+                xlink:href="#gentle-wave"
+                x="48"
+                y="0"
+                fill="rgba(255,255,255,0.7)"
+              />
+              <use
+                xlink:href="#gentle-wave"
+                x="48"
+                y="3"
+                fill="rgba(255,255,255,0.5)"
+              />
+              <use
+                xlink:href="#gentle-wave"
+                x="48"
+                y="5"
+                fill="rgba(255,255,255,0.3)"
+              />
+              <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
+            </g>
+          </svg>
+        </div>
+        <!--Waves end-->
+      </div>
+      <!--Header ends-->
 
-    <!------------------------  Copy Right    --------------------------------------------------------->
-
-    <div class="copy_right">
-      <p>Design and Developed by <b>Dilip Gelot</b> &hearts;</p>
-    </div>
-    <!-- <div id="bg-anim">
-      
-    </div> -->
-
-    <!------------------------  Copy Right    --------------------------------------------------------->
-
+      <!--Content starts-->
+      <div class="content flex">
+        <p class="love-with">
+          Designed and built with all the love in the world by the Dilip Gelot
+          ❤️
+        </p>
+      </div>
+    </footer>
     <!-- JavaScript Aos -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
