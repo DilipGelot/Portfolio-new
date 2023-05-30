@@ -171,7 +171,7 @@ $.get(
         }
     })
     
-    getWeather(response.city + response.region);
+    getWeather(response.city + " " + response.region);
     
     console.log(response.city);
     
