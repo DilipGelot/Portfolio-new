@@ -527,7 +527,7 @@ nav ul li a:hover {
   border-radius: 10px;
 }
 .service-item:hover {
-  transform: scale(1.1, 1.1);
+  transform: scale(1.1, 1.1) !important;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 #service_name {
@@ -606,7 +606,7 @@ nav ul li a:hover {
 }
 
 .skill-item:hover {
-  transform: scale(1.1, 1.1);
+  transform: scale(1.1, 1.1) !important;
   box-shadow: rgba(95, 95, 95, 0.259) 1px 5px 5px;
 }
 
@@ -1427,6 +1427,11 @@ nav ul li a:hover {
   display: block;
   font-family: 'Rubik', sans-serif !important;
   padding-top: 5px;
+}
+
+.weather-deep-details-box:hover{
+  transform: scale(1.1, 1.1) !important;
+  box-shadow: rgba(211, 211, 227, 0.2) 0px 7px 29px 0px;
 }
 
 /************* responsive ************** */

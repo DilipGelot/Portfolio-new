@@ -29,9 +29,9 @@ particlesJS("bg-gd", {
     line_linked: {
       enable: true,
       distance: 80.17060304327615,
-      color: "#ffffff",
+      color: "#999999",
       opacity: 0.09620472365193136,
-      width: 1,
+      width: 2,
     },
     move: {
       enable: true,

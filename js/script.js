@@ -21,7 +21,7 @@ icon.onclick = function(){
 // Typing Text    ************************
 
 
-const words = ["Frontend Developer","React JS Developer"];
+const words = ["Frontend Developer","React JS Developer", "Web Designer"];
 let j = 0;
 let timer;
 
@@ -123,50 +123,58 @@ chk.addEventListener('change', () => {
 
 const url =
   "https://weatherapi-com.p.rapidapi.com/current.json?q=53.1%2C-0.13?city=deesa";
-const options = {
-  method: "GET",
-  headers: {
-    "X-RapidAPI-Key": "57f4fe7da6mshd3e382af8174145p174e3ajsn506f7f40713b",
-    "X-RapidAPI-Host": "weatherapi-com.p.rapidapi.com",
-  },
-};
-const getWeather = (city)=>{
-    cityName.innerHTML = city;
-    fetch('https://weatherapi-com.p.rapidapi.com/current.json?q=53.1%2C-0.13?city='+city, options)
-      .then((response) => response.json())
-      .then((response) => {
-        console.log(response);
-        wind_kph.innerHTML = response.current.wind_kph;
-        // wind_degree.innerHTML = response.current.wind_degree;
-        pressure_in.innerHTML = response.current.pressure_in;
-        // precip_in.innerHTML = response.current.precip_in;
-        humidity.innerHTML = response.current.humidity;
-        cloud.innerHTML = response.current.cloud;
-        feelslike_c.innerHTML = response.current.feelslike_c;
-        uv.innerHTML = response.current.uv;
-        temp_c.innerHTML = response.current.temp_c;
-        cityName.innerHTML = response.location.name;
-        time.innerHTML = response.location.localtime;
-        country.innerHTML = response.location.country;
-        region.innerHTML = response.location.region;
-        tz_id.innerHTML = response.location.tz_id;
-        text.innerHTML = response.current.condition.text;
-        // icon.innerHTML = response.current.condition.icon;
-        
+
+$.get(
+  "http://ipinfo.io",
+  function (response) {
+    $(response.ip);
+    const options = {
+      method: "GET",
+      headers: {
+        "X-RapidAPI-Key": "57f4fe7da6mshd3e382af8174145p174e3ajsn506f7f40713b",
+        "X-RapidAPI-Host": "weatherapi-com.p.rapidapi.com",
+      },
+    };
+    const getWeather = (city)=>{
+        cityName.innerHTML = city;
+        fetch('https://weatherapi-com.p.rapidapi.com/current.json?q=53.1%2C-0.13?city='+city, options)
+          .then((response) => response.json())
+          .then((response) => {
+            console.log(response);
+            wind_kph.innerHTML = response.current.wind_kph;
+            pressure_in.innerHTML = response.current.pressure_in;
+            humidity.innerHTML = response.current.humidity;
+            cloud.innerHTML = response.current.cloud;
+            feelslike_c.innerHTML = response.current.feelslike_c;
+            uv.innerHTML = response.current.uv;
+            temp_c.innerHTML = response.current.temp_c;
+            cityName.innerHTML = response.location.name;
+            time.innerHTML = response.location.localtime;
+            country.innerHTML = response.location.country;
+            region.innerHTML = response.location.region;
+            tz_id.innerHTML = response.location.tz_id;
+            text.innerHTML = response.current.condition.text;
+            
+        })
+        .catch((err) => console.log(err));
+    }
+    submits.addEventListener("click", (e) => {
+        e.preventDefault();
+        if(city.value.length == 0){
+            alert("Please Enter a City Name");
+        }
+        else{
+    
+            getWeather(city.value)
+            city.value="";
+            // app.style.opacity="0";
+        }
     })
-    .catch((err) => console.log(err));
-}
-submits.addEventListener("click", (e) => {
-    e.preventDefault();
-    if(city.value.length == 0){
-        alert("Please Enter a City Name");
-    }
-    else{
-
-        getWeather(city.value)
-        city.value="";
-        app.style.opacity="0";
-    }
-})
-
-getWeather("Deesa");
+    
+    getWeather(response.city + response.region);
+    
+    console.log(response.city);
+    
+  },
+  "jsonp"
+);

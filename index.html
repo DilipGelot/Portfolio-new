@@ -31,6 +31,11 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500;1,600&display=swap"
       rel="stylesheet"
     />
+    <script
+      src="https://code.jquery.com/jquery-3.7.0.js"
+      integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
+      crossorigin="anonymous"
+    ></script>
   </head>
 
   <body id="body">
@@ -49,7 +54,7 @@
             <li><a href="#Services">Services</a></li>
             <li><a href="#skills">Skills</a></li>
             <li><a href="#Project">Projects</a></li>
-            <li><a href="#Contact">Contact</a></li>
+            <li><a href="#contact-me">Contact</a></li>
             <li>
               <div>
                 <input type="checkbox" class="checkbox" id="chk" />
@@ -68,11 +73,12 @@
         <div class="humburger">
           <i class="fa-solid fa-bars" id="humburger_icon"></i>
           <div class="menu_box" id="menu-box">
-            <a href="#">Home</a>
-            <a href="#">About</a>
-            <a href="#">Services</a>
-            <a href="#">Project</a>
-            <a href="#">Contact</a>
+            <a href="#first-page">Home</a>
+            <a href="#About">About</a>
+            <a href="#Services">Services</a>
+            <a href="#skills">Skills</a>
+            <a href="#Project">Project</a>
+            <a href="#contact-me">Contact</a>
             <div>
               <input type="checkbox" class="checkbox" id="chk" />
               <label class="label" for="chk">
@@ -431,7 +437,7 @@
 
     <!----------------------------     Contact Me       ----------------------------------------------------->
 
-    <div class="contact">
+    <div class="contact" id="contact-me">
       <div class="connect_me">
         <div class="contact_heading">
           <div>
@@ -546,7 +552,7 @@
         <h1 class="weather-title">Weather</h1>
         <!--Content before waves-->
         <div class="inner-header flex">
-          <div class="search-bar">
+          <div class="search-bar" id="search-bar">
             <form id="locationInput">
               <input
                 type="text"
@@ -579,29 +585,33 @@
           </div>
           <div class="weather-deep-details">
             <div class="weather-deep-details-box">
-              <p>Cloudy</p><br>
+              <p>Cloudy</p>
+              <br />
               <p class="cloud"><span id="cloud">-</span>%</p>
             </div>
             <div class="weather-deep-details-box">
-              <p>Humidity</p><br>
+              <p>Humidity</p>
+              <br />
               <p class="humidity"><span id="humidity"></span> %</p>
             </div>
             <div class="weather-deep-details-box">
-              <p>Wind</p><br>
+              <p>Wind</p>
+              <br />
               <p class="wind"><span id="wind_kph"></span>km/h</p>
             </div>
             <div class="weather-deep-details-box">
-              <p>UV Index</p><br>
+              <p>UV Index</p>
+              <br />
               <p class="uv"><span id="uv"></span></p>
             </div>
             <div class="weather-deep-details-box">
-              <p>Pressure</p><br>
-              <p class="pressure_in"
-                ><span id="pressure_in"></span>-inch</p
-              >
+              <p>Pressure</p>
+              <br />
+              <p class="pressure_in"><span id="pressure_in"></span>-inch</p>
             </div>
             <div class="weather-deep-details-box">
-              <p>Feels like</p><br>
+              <p>Feels like</p>
+              <br />
               <p class="feelslike_c"><span id="feelslike_c"></span>-C</p>
             </div>
           </div>
