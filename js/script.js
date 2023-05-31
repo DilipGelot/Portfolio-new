@@ -137,9 +137,7 @@ const getWeather = (city)=>{
       .then((response) => {
         console.log(response);
         wind_kph.innerHTML = response.current.wind_kph;
-        // wind_degree.innerHTML = response.current.wind_degree;
         pressure_in.innerHTML = response.current.pressure_in;
-        // precip_in.innerHTML = response.current.precip_in;
         humidity.innerHTML = response.current.humidity;
         cloud.innerHTML = response.current.cloud;
         feelslike_c.innerHTML = response.current.feelslike_c;
@@ -151,8 +149,6 @@ const getWeather = (city)=>{
         region.innerHTML = response.location.region;
         tz_id.innerHTML = response.location.tz_id;
         text.innerHTML = response.current.condition.text;
-        // icon.innerHTML = response.current.condition.icon;
-        
     })
     .catch((err) => console.log(err));
 }
