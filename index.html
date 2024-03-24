@@ -178,13 +178,13 @@
         <div class="education">
           <div class="main-edu">
             <div class="edu-circle">
-              <p>2023</p>
+              <p>2025</p>
             </div>
             <div id="edu_content">
-              <h2>Bachelor of Computer Application</h2>
+              <h2>Master of Computer Application</h2>
               <h3>
-                Hemchandracharya North Gujarat University
-                <p>CGPA 8.7</p>
+                Saurashtra University, Rajkot
+                <p>Pursuing...</p>
               </h3>
             </div>
           </div>
@@ -193,11 +193,14 @@
 
           <div class="main-edu">
             <div class="edu-circle">
-              <p>2020</p>
+              <p>2023</p>
             </div>
             <div id="edu_content">
-              <h2>12 Science - High School In Mathematics</h2>
-              <h3>SIR CHARLES WATSON HIGH SCHOOL</h3>
+              <h2>Bachelor of Computer Application</h2>
+              <h3>
+                Hemchandracharya North Gujarat University
+                <p>CGPA 8.7</p>
+              </h3>
             </div>
           </div>
         </div>
@@ -359,6 +362,30 @@
         <div class="slide fade">
           <div id="first_slide">
             <div id="project_img">
+              <img src="/Images/project.png" id="laptop" />
+            </div>
+            <div class="project_content">
+              <p class="project_name">Capital Store</p>
+              <p class="project-subtitle">(E-commerce Website)</p>
+              <p class="project_des">
+                This is my Major project build using
+                <b>HTML5, CSS3, JavaScript. </b>It has a variety of categories,
+                just visit the product listing page and you will see all the
+                products. I design it Responsive and add signUp, signIn pages.
+              </p>
+              <a
+                href="https://adorable-sunshine-0a9e75.netlify.app"
+                target="_blank"
+                ><button id="visit-site">
+                  Visit Site <i class="fa-solid fa-eye"></i></button
+              ></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="slide fade">
+          <div id="first_slide">
+            <div id="project_img">
               <img src="/Images/project3.png" id="laptop" />
             </div>
             <div class="project_content">
@@ -382,25 +409,7 @@
         </div>
 
         <div class="slide fade">
-          <div id="first_slide">
-            <div id="project_img">
-              <img src="/Images/project4.png" id="laptop" />
-            </div>
-            <div class="project_content">
-              <p class="project_name">Restaurant-static</p>
-              <p class="project-subtitle">(Static Website)</p>
-              <p class="project_des">
-                I build this using <b>HTML5, CSS3</b>. this is a static website
-                You can use it for showcase on Restaurant.
-              </p>
-              <a
-                href="https://unrivaled-sawine-27cc81.netlify.app"
-                target="_blank"
-                ><button id="visit-site">
-                  Visit Site <i class="fa-solid fa-eye"></i></button
-              ></a>
-            </div>
-          </div>
+          <div id="first_slide"></div>
         </div>
         <div class="slide fade">
           <div id="first_slide">
@@ -527,9 +536,14 @@
     <!-- *******    Contact FORM   ************** -->
     <div id="Contact"></div>
     <div id="contact_form">
-      <form name="netlify-form" method="POST" netlify>
+      <form name="" method="" onsubmit="sendEmail(); reset(); return false;">
         <i class="fa-solid fa-xmark" id="close"></i>
         <h2>Send me a message</h2>
+        <p>
+          "Sorry, we are facing some technical errors and cannot receive
+          messages at this time. Please email us at
+          <a href="mailto:gelotdilip9@gmail.com">gelotdilip9@gmail.com</a> ."
+        </p>
         <input type="text" placeholder="Enter Name" id="name" required />
         <input type="email" placeholder="Enter Email" id="email" required />
         <input type="tel" placeholder="Enter Phone" id="phone" required />
@@ -580,29 +594,33 @@
           </div>
           <div class="weather-deep-details">
             <div class="weather-deep-details-box">
-              <p>Cloudy</p><br>
+              <p>Cloudy</p>
+              <br />
               <p class="cloud"><span id="cloud">-</span>%</p>
             </div>
             <div class="weather-deep-details-box">
-              <p>Humidity</p><br>
+              <p>Humidity</p>
+              <br />
               <p class="humidity"><span id="humidity"></span> %</p>
             </div>
             <div class="weather-deep-details-box">
-              <p>Wind</p><br>
+              <p>Wind</p>
+              <br />
               <p class="wind"><span id="wind_kph"></span>km/h</p>
             </div>
             <div class="weather-deep-details-box">
-              <p>UV Index</p><br>
+              <p>UV Index</p>
+              <br />
               <p class="uv"><span id="uv"></span></p>
             </div>
             <div class="weather-deep-details-box">
-              <p>Pressure</p><br>
-              <p class="pressure_in"
-                ><span id="pressure_in"></span>-inch</p
-              >
+              <p>Pressure</p>
+              <br />
+              <p class="pressure_in"><span id="pressure_in"></span>-inch</p>
             </div>
             <div class="weather-deep-details-box">
-              <p>Feels like</p><br>
+              <p>Feels like</p>
+              <br />
               <p class="feelslike_c"><span id="feelslike_c"></span>-C</p>
             </div>
           </div>
