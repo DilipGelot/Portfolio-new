@@ -167,12 +167,12 @@ nav ul li a:hover {
   #header {
     padding: 15px 3vw;
   }
-  .fa-bars {
+  #humburger_icon {
     font-size: 30px;
     color: #0f172a;
-    transition: color 0.3s ease;
+    transition: color 0.3s ease, transform 0.3s ease;
   }
-  body.dark .fa-bars {
+  body.dark #humburger_icon {
     color: #f1f5f9;
   }
   .menu_box {

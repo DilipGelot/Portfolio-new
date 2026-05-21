@@ -14,6 +14,13 @@ var icon = document.getElementById("humburger_icon");
 var menuBox = document.getElementById("menu-box");
 icon.onclick = function () {
   menuBox.classList.toggle("open-menu");
+  if (menuBox.classList.contains("open-menu")) {
+    icon.classList.remove("fa-bars");
+    icon.classList.add("fa-xmark");
+  } else {
+    icon.classList.remove("fa-xmark");
+    icon.classList.add("fa-bars");
+  }
 };
 
 // Close mobile menu when clicking a link
@@ -21,6 +28,8 @@ const menuLinks = menuBox.querySelectorAll("a");
 menuLinks.forEach(link => {
   link.onclick = function () {
     menuBox.classList.remove("open-menu");
+    icon.classList.remove("fa-xmark");
+    icon.classList.add("fa-bars");
   };
 });
 
