@@ -615,20 +615,20 @@ body.dark .timeline-content ul li::before {
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    padding: 100px 5vw 30px 5vw;
+    padding: 90px 5vw 10px 5vw;
     margin-top: 0;
-    gap: 30px;
+    gap: 20px;
   }
   .hero_image_container {
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-bottom: 30px;
+    padding-bottom: 10px;
   }
   #home_image {
-    width: 75%;
-    max-width: 320px;
+    width: 90%;
+    max-width: 420px;
     height: auto;
     max-height: none;
     padding: 0;
@@ -637,7 +637,7 @@ body.dark .timeline-content ul li::before {
   .first_page_content {
     width: 100%;
     padding: 0;
-    text-align: center;
+    text-align: left;
     background-size: contain;
     background-position: bottom;
   }
@@ -663,10 +663,10 @@ body.dark .timeline-content ul li::before {
     line-height: 1.4;
   }
   .first_page_content div {
-    justify-content: center;
+    justify-content: flex-start;
   }
   .hero-ctas {
-    justify-content: center;
+    justify-content: flex-start;
   }
 }
 
