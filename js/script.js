@@ -1,10 +1,10 @@
 // Scroll Event
 window.addEventListener("scroll", function () {
+  const header = document.getElementById("header");
   if (this.window.pageYOffset > 50) {
-    document.getElementById("header").style.boxShadow =
-      "rgba(99, 99, 99, 0.2) 0px 2px 8px 0px";
+    header.classList.add("scrolled");
   } else {
-    document.getElementById("header").style.boxShadow = "none";
+    header.classList.remove("scrolled");
   }
 });
 
@@ -16,9 +16,17 @@ icon.onclick = function () {
   menuBox.classList.toggle("open-menu");
 };
 
+// Close mobile menu when clicking a link
+const menuLinks = menuBox.querySelectorAll("a");
+menuLinks.forEach(link => {
+  link.onclick = function () {
+    menuBox.classList.remove("open-menu");
+  };
+});
+
 // Typing Text    ************************
 
-const words = ["Frontend Developer", "React JS Developer", "Web Designer"];
+const words = ["Founder @ TheOrbexa", "Full-Stack Developer", "AI Developer", "SaaS Developer", "Mobile App Developer", "Website Developer"];
 let j = 0;
 let timer;
 
@@ -60,67 +68,77 @@ typingEffect();
 
 //  Project Slider            ********************************************
 
-var slideIndex = 1;
-showSlides(slideIndex);
+//  Project Filtering logic            ********************************************
 
-function plusSlide(n) {
-  showSlides((slideIndex += n));
-}
+document.addEventListener("DOMContentLoaded", () => {
+  const filterBtns = document.querySelectorAll(".filter-btn");
+  const projectCards = document.querySelectorAll(".project-card");
 
-function currentslide(n) {
-  showSlides((slideIndex = n));
-}
+  filterBtns.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      // Remove active class from all buttons
+      filterBtns.forEach((b) => b.classList.remove("active"));
+      // Add active class to clicked button
+      btn.classList.add("active");
 
-function showSlides(n) {
-  var i;
-  var slides = document.getElementsByClassName("slide");
-  if (n > slides.length) {
-    slideIndex = 1;
-  }
-  if (n < 1) {
-    slideIndex = slides.length;
-  }
+      const filterValue = btn.getAttribute("data-filter");
 
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
+      projectCards.forEach((card) => {
+        if (filterValue === "all" || card.getAttribute("data-category") === filterValue) {
+          card.style.display = "block";
+          card.style.opacity = "0";
+          setTimeout(() => {
+            card.style.opacity = "1";
+          }, 50);
+        } else {
+          card.style.display = "none";
+        }
+      });
+    });
+  });
+});
 
-  slides[slideIndex - 1].style.display = "block";
-}
 
-var slideIndex = 0;
-showSlides();
-function showSlides() {
-  var i;
-  var slides = document.getElementsByClassName("slide");
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
-  slideIndex++;
-  if (slideIndex > slides.length) {
-    slideIndex = 1;
-  }
-  slides[slideIndex - 1].style.display = "block";
-}
-
-// ************   Contact Form        ******************
-
-let msg_box = document.getElementById("contact_form");
-
-document.getElementById("connect").onclick = function () {
-  msg_box.style.display = "flex";
-};
-document.getElementById("close").onclick = function () {
-  msg_box.style.display = "none";
-};
 
 // ************ Dark mode *********
 
-const chk = document.getElementById("chk");
+const chkDesktop = document.getElementById("theme-toggle-desktop");
+const chkMobile = document.getElementById("theme-toggle-mobile");
 
-chk.addEventListener("change", () => {
-  document.body.classList.toggle("dark");
-});
+function setTheme(isDark) {
+  if (isDark) {
+    document.body.classList.add("dark");
+    localStorage.setItem("theme", "dark");
+    if (chkDesktop) chkDesktop.checked = true;
+    if (chkMobile) chkMobile.checked = true;
+  } else {
+    document.body.classList.remove("dark");
+    localStorage.setItem("theme", "light");
+    if (chkDesktop) chkDesktop.checked = false;
+    if (chkMobile) chkMobile.checked = false;
+  }
+}
+
+// Initial theme check
+const savedTheme = localStorage.getItem("theme");
+const systemPrefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+if (savedTheme === "dark" || (!savedTheme && systemPrefersDark)) {
+  setTheme(true);
+} else {
+  setTheme(false);
+}
+
+if (chkDesktop) {
+  chkDesktop.addEventListener("change", (e) => {
+    setTheme(e.target.checked);
+  });
+}
+
+if (chkMobile) {
+  chkMobile.addEventListener("change", (e) => {
+    setTheme(e.target.checked);
+  });
+}
 
 // ************ Weather *********
 
@@ -137,7 +155,7 @@ const getWeather = (city) => {
   cityName.innerHTML = city;
   fetch(
     "https://weatherapi-com.p.rapidapi.com/current.json?q=53.1%2C-0.13?city=" +
-      city,
+    city,
     options
   )
     .then((response) => response.json())
@@ -166,7 +184,7 @@ submits.addEventListener("click", (e) => {
   } else {
     getWeather(city.value);
     city.value = "";
-    app.style.opacity = "0";
+    if (typeof app !== "undefined") app.style.opacity = "0";
   }
 });
 

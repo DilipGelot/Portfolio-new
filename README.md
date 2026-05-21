@@ -12,4 +12,4 @@ Features :-
 
 ## Demo 
 
-https://gelotdilip.netlify.app/
+https://dilipgelot.in/
