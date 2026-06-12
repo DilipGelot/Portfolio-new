@@ -37,7 +37,8 @@ if (!preg_match('/^\+?[0-9\s\-]{6,20}$/', $phone)) {
 }
 
 // Helper to read SMTP response
-function smtp_response($socket, $expected_code) {
+function smtp_response($socket, $expected_code)
+{
     $response = "";
     while (true) {
         $line = fgets($socket, 512);
@@ -58,7 +59,8 @@ function smtp_response($socket, $expected_code) {
 }
 
 // SMTP Mail Sender Function
-function send_smtp_email($to, $subject, $html_content, $from_name = 'Dilip Gelot') {
+function send_smtp_email($to, $subject, $html_content, $from_name = 'Dilip Gelot')
+{
     $socket = @fsockopen(SMTP_HOST, SMTP_PORT, $errno, $errstr, 15);
     if (!$socket) {
         throw new Exception("SMTP connection failure: $errstr ($errno)");
@@ -99,7 +101,7 @@ function send_smtp_email($to, $subject, $html_content, $from_name = 'Dilip Gelot
     ];
 
     $email_body = implode("\r\n", $headers) . "\r\n\r\n" . $html_content;
-    
+
     // Escape dots at the beginning of a line
     $email_body = str_replace("\r\n.", "\r\n..", $email_body);
 
