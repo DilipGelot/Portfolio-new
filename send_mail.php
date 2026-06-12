@@ -36,25 +36,32 @@ if (!preg_match('/^\+?[0-9\s\-]{6,20}$/', $phone)) {
     exit;
 }
 
+// Helper to read SMTP response
+function smtp_response($socket, $expected_code) {
+    $response = "";
+    while (true) {
+        $line = fgets($socket, 512);
+        if ($line === false) {
+            break;
+        }
+        $response .= $line;
+        // SMTP response lines have code (3 digits) followed by '-' for multi-line, or ' ' for the last line.
+        if (strlen($line) >= 4 && $line[3] === ' ') {
+            break;
+        }
+    }
+    $code = substr($response, 0, 3);
+    if ($code != $expected_code) {
+        throw new Exception("SMTP Error: Expected $expected_code, got " . trim($response));
+    }
+    return $response;
+}
+
 // SMTP Mail Sender Function
 function send_smtp_email($to, $subject, $html_content, $from_name = 'Dilip Gelot') {
     $socket = @fsockopen(SMTP_HOST, SMTP_PORT, $errno, $errstr, 15);
     if (!$socket) {
         throw new Exception("SMTP connection failure: $errstr ($errno)");
-    }
-
-    function smtp_response($socket, $expected_code) {
-        $response = "";
-        while (substr($response, 3, 1) != ' ') {
-            $line = fgets($socket, 512);
-            if ($line === false) break;
-            $response .= $line;
-        }
-        $code = substr($response, 0, 3);
-        if ($code != $expected_code) {
-            throw new Exception("SMTP Error: Expected $expected_code, got $response");
-        }
-        return $response;
     }
 
     smtp_response($socket, '220');

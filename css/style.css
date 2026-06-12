@@ -4931,3 +4931,112 @@ custom contact form popup modal
 .mil-popup-box .mil-button {
   width: 100%;
 }
+
+/* -------------------------------------------
+
+contact form inline status styling
+
+------------------------------------------- */
+.mil-button.mil-sending {
+  padding: 0 50px !important;
+}
+
+@media screen and (max-width: 992px) {
+  .mil-button.mil-sending {
+    padding: 0 40px !important;
+  }
+}
+
+.mil-status-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  padding: 20px 0;
+}
+
+.mil-status-box {
+  background: #111;
+  border: 1px solid rgba(255, 152, 0, 0.25);
+  border-radius: 12px;
+  padding: 50px 40px;
+  max-width: 550px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.6);
+  -webkit-animation: milStatusFadeIn 0.5s ease forwards;
+  animation: milStatusFadeIn 0.5s ease forwards;
+}
+
+.mil-status-box.mil-error {
+  border-color: rgba(255, 51, 51, 0.25);
+}
+
+.mil-status-icon {
+  font-size: 64px;
+  color: #ff9800;
+  margin-bottom: 25px;
+}
+
+.mil-status-box.mil-error .mil-status-icon {
+  color: #ff3333;
+}
+
+.mil-status-box h4 {
+  color: #fff;
+  font-family: "Outfit", sans-serif;
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 15px;
+  letter-spacing: 1px;
+}
+
+.mil-status-box p {
+  color: rgba(255, 255, 255, 0.6);
+  font-family: "Outfit", sans-serif;
+  font-size: 15px;
+  line-height: 1.6;
+  margin-bottom: 35px;
+}
+
+.mil-status-box .mil-button {
+  padding: 0 50px !important;
+}
+
+@media screen and (max-width: 992px) {
+  .mil-status-box .mil-button {
+    padding: 0 40px !important;
+  }
+}
+
+@-webkit-keyframes milStatusFadeIn {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(20px);
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+@keyframes milStatusFadeIn {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(20px);
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}

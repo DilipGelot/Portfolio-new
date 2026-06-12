@@ -1148,27 +1148,28 @@ $(function () {
             const submitBtn = document.getElementById('submit-btn');
 
             if (!name || !email || !phone || !message) {
-                showPopup('error', 'Please fill in all the required fields.');
+                showStatus('error', 'Please fill in all the required fields.');
                 return;
             }
 
             // Simple email validation pattern
             const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
             if (!emailPattern.test(email)) {
-                showPopup('error', 'Please enter a valid email address.');
+                showStatus('error', 'Please enter a valid email address.');
                 return;
             }
 
             // Simple phone validation pattern (digits, spaces, hyphens, plus sign)
             const phonePattern = /^\+?[0-9\s\-]{6,20}$/;
             if (!phonePattern.test(phone)) {
-                showPopup('error', 'Please enter a valid mobile number.');
+                showStatus('error', 'Please enter a valid mobile number.');
                 return;
             }
 
             // Disable button and show sending state
             const origBtnText = submitBtn.innerHTML;
             submitBtn.disabled = true;
+            submitBtn.classList.add('mil-sending');
             submitBtn.innerHTML = '<span>Sending...</span>';
 
             const formData = new FormData(form);
@@ -1185,67 +1186,75 @@ $(function () {
             })
             .then(data => {
                 if (data.status === 'success') {
-                    showPopup('success', data.message);
-                    form.reset();
+                    showStatus('success', data.message);
                 } else {
-                    showPopup('error', data.message || 'Something went wrong. Please try again.');
+                    showStatus('error', data.message || 'Something went wrong. Please try again.');
                 }
             })
             .catch(error => {
                 console.error('Error:', error);
-                showPopup('error', 'Failed to connect to the mail server. Please try again later.');
+                showStatus('error', 'Failed to connect to the mail server. Please try again later.');
             })
             .finally(() => {
                 submitBtn.disabled = false;
+                submitBtn.classList.remove('mil-sending');
                 submitBtn.innerHTML = origBtnText;
             });
         });
     }
 
-    function showPopup(status, message) {
-        // Remove existing popup if any
-        const existing = document.querySelector('.mil-popup-overlay');
-        if (existing) existing.remove();
+    function showStatus(status, message) {
+        const form = document.getElementById('contact-form');
+        const statusContainer = document.getElementById('contact-status-container');
+        const statusIcon = document.getElementById('contact-status-icon');
+        const statusTitle = document.getElementById('contact-status-title');
+        const statusMessage = document.getElementById('contact-status-message');
+        const statusBtn = document.getElementById('contact-status-btn');
+        const statusBox = statusContainer ? statusContainer.querySelector('.mil-status-box') : null;
+
+        if (!form || !statusContainer) return;
 
         const isSuccess = status === 'success';
-        const iconClass = isSuccess ? 'fa-check-circle' : 'fa-exclamation-circle';
-        const titleText = isSuccess ? 'Message Sent!' : 'Error Sending Message';
 
-        const popupHTML = `
-            <div class="mil-popup-overlay ${!isSuccess ? 'mil-error' : ''}">
-                <div class="mil-popup-box">
-                    <div class="mil-popup-close">&times;</div>
-                    <div class="mil-popup-icon"><i class="fas ${iconClass}"></i></div>
-                    <h4>${titleText}</h4>
-                    <p>${message}</p>
-                    <button class="mil-button mil-arrow-place mil-popup-close-btn">
-                        <span>Close</span>
-                    </button>
-                </div>
-            </div>
-        `;
+        // Update content
+        if (statusIcon) {
+            statusIcon.innerHTML = isSuccess ? '<i class="fas fa-check-circle"></i>' : '<i class="fas fa-exclamation-circle"></i>';
+        }
+        if (statusTitle) {
+            statusTitle.textContent = isSuccess ? 'Message Sent!' : 'Error Sending Message';
+        }
+        if (statusMessage) {
+            statusMessage.textContent = message;
+        }
 
-        document.body.insertAdjacentHTML('beforeend', popupHTML);
-        const overlay = document.querySelector('.mil-popup-overlay');
-
-        // Trigger reflow then activate transition
-        setTimeout(() => {
-            overlay.classList.add('mil-active');
-        }, 10);
-
-        const closePopup = () => {
-            overlay.classList.remove('mil-active');
-            setTimeout(() => {
-                overlay.remove();
-            }, 400);
-        };
-
-        overlay.querySelector('.mil-popup-close').addEventListener('click', closePopup);
-        overlay.querySelector('.mil-popup-close-btn').addEventListener('click', closePopup);
-        overlay.addEventListener('click', function (e) {
-            if (e.target === overlay) {
-                closePopup();
+        if (statusBox) {
+            if (isSuccess) {
+                statusBox.classList.remove('mil-error');
+            } else {
+                statusBox.classList.add('mil-error');
             }
+        }
+
+        if (statusBtn) {
+            statusBtn.querySelector('span').textContent = isSuccess ? 'Send Another Message' : 'Try Again';
+            
+            // Remove previous event listener to avoid duplicate bindings
+            const newBtn = statusBtn.cloneNode(true);
+            statusBtn.parentNode.replaceChild(newBtn, statusBtn);
+            
+            newBtn.addEventListener('click', function() {
+                $(statusContainer).fadeOut(300, function() {
+                    $(form).fadeIn(300);
+                    if (isSuccess) {
+                        form.reset();
+                    }
+                });
+            });
+        }
+
+        // Hide form and show status with smooth animation
+        $(form).fadeOut(300, function() {
+            $(statusContainer).fadeIn(300);
         });
     }
 
