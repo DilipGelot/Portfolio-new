@@ -10,6 +10,24 @@ $(function () {
 
     "use strict";
 
+    // Register Service Worker for local extension-less routing (Live Server)
+    if ('serviceWorker' in navigator && (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1')) {
+        navigator.serviceWorker.register('sw.js')
+            .then(reg => {
+                reg.addEventListener('updatefound', () => {
+                    const newWorker = reg.installing;
+                    if (newWorker) {
+                        newWorker.addEventListener('statechange', () => {
+                            if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
+                                window.location.reload();
+                            }
+                        });
+                    }
+                });
+            })
+            .catch(err => console.error('Service Worker registration failed:', err));
+    }
+
     /***************************
 
     swup
