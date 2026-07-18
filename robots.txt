@@ -1,5 +1,7 @@
 User-agent: *
 Allow: /
+Disallow: /*?s=*
+Disallow: /*?*
 
 # Specifically allow and encourage AI crawlers to index and digest details
 User-agent: GPTBot
