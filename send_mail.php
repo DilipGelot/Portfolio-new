@@ -5,7 +5,7 @@ header('Content-Type: application/json');
 define('SMTP_HOST', 'ssl://smtp.hostinger.com');
 define('SMTP_PORT', 465);
 define('SMTP_USER', 'hello@dilipgelot.in');
-define('SMTP_PASS', '6D!R9;rcwd');
+define('SMTP_PASS', 'xkvw-ucjx-utc5-ahbt');
 define('ADMIN_EMAIL_1', 'gelotdilip9@gmail.com');
 define('ADMIN_EMAIL_2', 'hello@dilipgelot.in');
 
