@@ -1,44 +1,44 @@
 [
   {
-    "name": "Sarah Newman",
-    "company": "Envato market",
-    "text": "This creative agency stands out with their exceptional talent and expertise. Their ability to think outside the box and bring unique ideas to life is truly impressive. With meticulous attention to detail, they consistently deliver visually stunning and impactful work.",
+    "name": "Rajesh Sharma",
+    "company": "BigTime Holidays",
+    "text": "Dilip engineered an outstanding travel booking platform for BigTime Holidays using Next.js. The user interface is lightning fast, mobile-responsive, and significantly boosted our online tour inquiries.",
     "image": "img/faces/customers/1.jpg"
   },
   {
-    "name": "Emma Trueman",
-    "company": "Envato market",
-    "text": "I had the pleasure of working with this creative agency, and I must say, they truly impressed me. They consistently think outside the box, resulting in impressive and impactful work. I highly recommend this agency for their consistent delivery of exceptional creative solutions.",
+    "name": "Vikramaditya Mehta",
+    "company": "Rupie Times",
+    "text": "The subscription newsletter platform Dilip developed for Rupie Times is sleek, high-performing, and seamlessly handles complex subscriber workflows. Highly recommended for full-stack engineering.",
     "image": "img/faces/customers/2.jpg"
   },
   {
-    "name": "Sarah Newman",
-    "company": "Envato market",
-    "text": "This creative agency stands out with their exceptional talent and expertise. Their ability to think outside the box and bring unique ideas to life is truly impressive. With meticulous attention to detail, they consistently deliver visually stunning and impactful work.",
+    "name": "Amit Patel",
+    "company": "Arvind Impex Industries",
+    "text": "Dilip built our corporate web portal with exceptional precision. The modern Next.js design and clean responsive layout gave our industrial brand a massive digital upgrade.",
     "image": "img/faces/customers/3.jpg"
   },
   {
-    "name": "Emma Trueman",
-    "company": "Envato market",
-    "text": "I had the pleasure of working with this creative agency, and I must say, they truly impressed me. They consistently think outside the box, resulting in impressive and impactful work. I highly recommend this agency for their consistent delivery of exceptional creative solutions.",
+    "name": "Marcus Vance",
+    "company": "DropLX",
+    "text": "Working with Dilip on DropLX was a game changer. He delivered a robust scalable SaaS platform with Node.js and Next.js, implementing real-time messaging and user management seamlessly.",
     "image": "img/faces/customers/4.jpg"
   },
   {
-    "name": "Sarah Newman",
-    "company": "Envato market",
-    "text": "This creative agency stands out with their exceptional talent and expertise. Their ability to think outside the box and bring unique ideas to life is truly impressive. With meticulous attention to detail, they consistently deliver visually stunning and impactful work.",
+    "name": "Dr. Ananya Roy",
+    "company": "FLWK Care",
+    "text": "Dilip created an elegant, patient-first landing page for FLWK Care. The intuitive layout, fast loading speed, and healthcare-focused UI exceeded all our expectations.",
     "image": "img/faces/customers/5.jpg"
   },
   {
-    "name": "Emma Trueman",
-    "company": "Envato market",
-    "text": "I had the pleasure of working with this creative agency, and I must say, they truly impressed me. They consistently think outside the box, resulting in impressive and impactful work. I highly recommend this agency for their consistent delivery of exceptional creative solutions.",
+    "name": "Deepak Varma",
+    "company": "Quriie",
+    "text": "Dilip developed our multi-vendor e-commerce platform with great technical expertise. Product navigation, checkout workflows, and performance optimization were flawlessly executed.",
     "image": "img/faces/customers/6.jpg"
   },
   {
-    "name": "Sarah Newman",
-    "company": "Envato market",
-    "text": "This creative agency stands out with their exceptional talent and expertise. Their ability to think outside the box and bring unique ideas to life is truly impressive. With meticulous attention to detail, they consistently deliver visually stunning and impactful work.",
+    "name": "Siddharth Rao",
+    "company": "PrintLabX",
+    "text": "PrintLabX needed a high-converting, modern landing page, and Dilip delivered beyond expectations. The design aesthetics and clean Next.js architecture are top notch.",
     "image": "img/faces/customers/7.jpg"
   }
 ]
